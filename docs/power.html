@@ -368,9 +368,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb181-8"><a href="power.html#cb181-8" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span>   </span>
 <span id="cb181-9"><a href="power.html#cb181-9" tabindex="-1"></a>  <span class="fu">t_test</span>(bill_length_mm <span class="sc">~</span> species, <span class="at">var.equal =</span> <span class="cn">FALSE</span>, <span class="at">detailed =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 1 × 15
-##   estimate estimate1 estimate2 .y.            group1 group2    n1    n2 statistic      p    df conf.low conf.high method alternative
-## *    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;      
-## 1     -7.9      39.4      47.3 bill_length_mm Adelie Gentoo     2     2     -9.80 0.0607  1.03    -17.4      1.64 T-test two.sided</code></pre>
+##   estimate estimate1 estimate2 .y.            group1 group2    n1    n2 statistic     p    df conf.low conf.high method alternative
+## *    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;      
+## 1    -12.2      36.5      48.8 bill_length_mm Adelie Gentoo     2     2     -2.17 0.262  1.06    -74.4      49.9 T-test two.sided</code></pre>
 <p>Compared to the p-value in the previous test, this p-value is much larger and, depending on which random samples were chosen in <code>slice_sample</code>, likely higher than our cut-off of 0.05 and would lead to an insignificant difference in bill length between the two species.</p>
 <p>Therefore, as sample size decreases, so does our power in identifying true trends.</p>
 </div>
@@ -427,7 +427,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## # A tibble: 1 × 15
 ##   estimate estimate1 estimate2 .y.            group1 group2    n1    n2 statistic      p    df conf.low conf.high method alternative
 ## *    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;     &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;      
-## 1    -24.9      38.2      63.2 bill_length_mm Adelie Gentoo     2     2     -3.90 0.0606  1.99    -52.7      2.76 T-test two.sided</code></pre>
+## 1    -26.6      36.8      63.5 bill_length_mm Adelie Gentoo     2     2     -15.2 0.0411  1.01    -48.6     -4.72 T-test two.sided</code></pre>
 </div>
 </div>
 <div id="note-about-random-selection" class="section level3 hasAnchor" number="9.0.2">
